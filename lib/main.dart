@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         // ignore: avoid_unnecessary_containers
         child: Container(
+          color: Colors.grey[100],
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
@@ -114,10 +115,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 autoPlayInterval: 3000,
               ),
               // ignore: prefer_const_constructors
-              Text(
-                'Headline',
-                // ignore: prefer_const_constructors
-                style: TextStyle(fontSize: 18),
+              Container(
+                margin: EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+                child: const Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    'Headline',
+                    // ignore: prefer_const_constructors
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
               ),
               Expanded(
                 child: ListView.builder(
@@ -130,8 +137,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: <Widget>[
                       Image(
                         image: AssetImage(donations[int].image),
-                        width: 160.0,
-                        height: 100.0,
+                        width: 170.0,
+                        height: 110.0,
                       ),
                       Text(donations[int].name),
                       Text(donations[int].description)
@@ -139,9 +146,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   )),
                 ),
               ),
-              const Text(
-                'Demo Headline 2',
-                style: TextStyle(fontSize: 18),
+              Container(
+                margin: EdgeInsets.fromLTRB(5.0, 0.0, 0.0, 0.0),
+                child: const Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    'Headline 2',
+                    // ignore: prefer_const_constructors
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
               ),
               Expanded(
                 child: ListView.builder(
